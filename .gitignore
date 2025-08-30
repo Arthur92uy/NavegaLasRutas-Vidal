@@ -1,5 +1,27 @@
-# Logs
-logs
+# 📦 Dependencias
+node_modules/
+
+# 🏗️ Builds y distribución
+build/
+dist/
+dist-ssr/
+
+# 🔐 Variables de entorno
+.env
+*.local
+
+# 🧪 Testing y coverage
+coverage/
+*.lcov
+
+# 🧹 Caches y temporales
+.cache/
+.eslintcache
+.vite/
+*.tgz
+
+# 📄 Logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,18 +29,21 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# 🧠 Archivos de lock (mantener solo el que uses)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
-# Editor directories and files
+# 🧰 Configuración de editores
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# 🖥️ Archivos de sistema
+.DS_Store
+Thumbs.db
