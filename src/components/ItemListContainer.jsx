@@ -20,7 +20,7 @@ export function ItemListContainer() {
 	}, []);
 
 	return (
-		<div className="cards-container glass">
+		<main className="cards-container glass">
 			{pokemons.map((pokemon) => {
 				return (
 					<Card
@@ -29,6 +29,6 @@ export function ItemListContainer() {
 					/>
 				);
 			})}
-		</div>
+		</main>
 	);
 }

@@ -7,9 +7,9 @@ function App() {
 		<>
 			<Navbar
 				h1="TCG Safari"
-				item1="Mercado de Cartas"
-				item2="Expansiones"
-				item3="Blog/News"
+				item1="Inicio"
+				// item2="Expansiones" Proximamente
+				// item3="Blog/News" Proximamente
 				item4="Nosotros"
 				item5="Contacto"
 				usuario="Arthur92UY"
