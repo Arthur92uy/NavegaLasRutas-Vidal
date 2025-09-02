@@ -1,7 +1,7 @@
 export function ItemListContainer(props) {
 	return (
 		<>
-			<span>Bienvenido {props.nombreBienvenida}</span>
+			<span className="bienvenida">Bienvenido {props.nombreBienvenida}</span>
 		</>
 	);
 }
