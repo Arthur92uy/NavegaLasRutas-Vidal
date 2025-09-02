@@ -1,3 +1,4 @@
+import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { ItemListContainer } from "./components/ItemListContainer";
 import PopUp from "./components/PopUp";
@@ -13,8 +14,8 @@ function App() {
 				item5="Contacto"
 				usuario="Arthur92UY"
 			/>
-			<ItemListContainer nombreBienvenida="Arthur92UY" />
-			<PopUp />
+			<ItemListContainer />
+			<Footer />
 		</>
 	);
 }

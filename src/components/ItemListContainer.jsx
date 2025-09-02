@@ -1,7 +1,34 @@
-export function ItemListContainer(props) {
+import { useState, useEffect } from "react";
+import { Card } from "./Card";
+
+export function ItemListContainer() {
+	const [pokemons, setPokemons] = useState([]);
+	console.log(pokemons);
+
+	useEffect(() => {
+		async function obtenerPokemones() {
+			try {
+				const resultado = await (
+					await fetch("https://api.tcgdex.net/v2/es/sets/sv03.5/")
+				).json();
+				setPokemons(resultado.cards);
+			} catch (error) {
+				console.log(error);
+			}
+		}
+		obtenerPokemones();
+	}, []);
+
 	return (
-		<>
-			<span className="bienvenida">Bienvenido {props.nombreBienvenida}</span>
-		</>
+		<div className="cards-container glass">
+			{pokemons.map((pokemon) => {
+				return (
+					<Card
+						cardName={pokemon.name}
+						urlCardImg={pokemon.image + "/high.webp"}
+					/>
+				);
+			})}
+		</div>
 	);
 }
