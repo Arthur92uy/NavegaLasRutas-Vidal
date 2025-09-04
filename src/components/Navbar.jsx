@@ -19,7 +19,7 @@ export function Navbar(props) {
 				<h1>{props.h1}</h1>
 			</div>
 			<nav className="header__div-nav">
-				<Link to="/inicio">
+				<Link to="/">
 					<img src={icoBulbasaur} alt="" />
 					<span>{props.item1}</span>
 				</Link>

@@ -1,7 +1,8 @@
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { ItemListContainer } from "./components/ItemListContainer";
-import PopUp from "./components/PopUp";
+import {ItemDetail} from './components/ItemDetail'
+import { Routes, Route } from "react-router-dom";
 function App() {
 	return (
 		<>
@@ -14,7 +15,14 @@ function App() {
 				item5="Contacto"
 				usuario="Arthur92UY"
 			/>
-			<ItemListContainer />
+
+			<Routes>
+				<Route path="/" element={<ItemListContainer />} />
+				<Route path="/nosotros" element={<p>Page nosotros</p>} />
+				<Route path="/contacto" element={<p>Page contacto</p>} />
+				<Route path="/pokemon/:id" element={<ItemDetail/>} />
+				
+			</Routes>
 			<Footer />
 		</>
 	);

@@ -1,3 +1,4 @@
+import {ItemList} from './ItemList'
 import { useState, useEffect } from "react";
 import { Card } from "./Card";
 
@@ -19,16 +20,5 @@ export function ItemListContainer() {
 		obtenerPokemones();
 	}, []);
 
-	return (
-		<main className="cards-container glass">
-			{pokemons.map((pokemon) => {
-				return (
-					<Card
-						cardName={pokemon.name}
-						urlCardImg={pokemon.image + "/high.webp"}
-					/>
-				);
-			})}
-		</main>
-	);
+	return <ItemList pokemones={pokemons}/>;
 }
