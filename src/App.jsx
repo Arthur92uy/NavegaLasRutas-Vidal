@@ -3,6 +3,7 @@ import { Navbar } from "./components/Navbar";
 import { ItemListContainer } from "./components/ItemListContainer";
 import {ItemDetail} from './components/ItemDetail'
 import { Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 function App() {
 	return (
 		<>
@@ -24,6 +25,7 @@ function App() {
 				
 			</Routes>
 			<Footer />
+			<Toaster/>
 		</>
 	);
 }
