@@ -1,10 +1,9 @@
-import {ItemList} from './ItemList'
+import { ItemList } from "./ItemList";
 import { useState, useEffect } from "react";
 import { Card } from "./Card";
 
 export function ItemListContainer() {
 	const [pokemons, setPokemons] = useState([]);
-	console.log(pokemons);
 
 	useEffect(() => {
 		async function obtenerPokemones() {
@@ -20,5 +19,12 @@ export function ItemListContainer() {
 		obtenerPokemones();
 	}, []);
 
-	return <ItemList pokemones={pokemons}/>;
+	return (
+		<main className="fullwidth">
+			<h2 className="main-titulo glass">
+				Lista de cartas disponibles de la colección:
+			</h2>
+			<ItemList pokemones={pokemons} />
+		</main>
+	);
 }
